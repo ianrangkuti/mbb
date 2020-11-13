@@ -1,0 +1,221 @@
+{
+  "Name": "Auto_Transaction",
+  "CreationDate": "2020-11-10",
+  "Commands": [
+    {
+      "Command": "store",
+      "Target": "ljsaunty1",
+      "Value": "username"
+    },
+    {
+      "Command": "store",
+      "Target": "cpm50465046",
+      "Value": "password"
+    },
+    {
+      "Command": "store",
+      "Target": "016",
+      "Value": "user_account_type"
+    },
+    {
+      "Command": "store",
+      "Target": "1100008033490",
+      "Value": "account_number"
+    },
+    {
+      "Command": "store",
+      "Target": "10",
+      "Value": "pay_amount"
+    },
+    {
+      "Command": "open",
+      "Target": "https://www.maybank2u.com.my/home/m2u/common/login.do",
+      "Value": ""
+    },
+    {
+      "Command": "waitForPageToLoad",
+      "Target": "3000",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=username",
+      "Value": "${username}"
+    },
+    {
+      "Command": "click",
+      "Target": "name=button",
+      "Value": ""
+    },
+    {
+      "Command": "waitForElementVisible",
+      "Target": "xpath=//*[@id=\"root\"]/div/div/div[2]/div[2]/div/div/div/div/div[2]/div/h1",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"root\"]/div/div/div[2]/div[2]/div/div/div/div/div[2]/div[2]/div/div[2]/button",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=my-password-input",
+      "Value": "${password}"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"root\"]/div/div/div[2]/div[2]/div/div/div/div/div[2]/div[2]/div/div[2]/button",
+      "Value": ""
+    },
+    {
+      "Command": "waitForElementVisible",
+      "Target": "linkText=PAY & TRANSFER",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "linkText=PAY & TRANSFER",
+      "Value": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=/html/body/div[5]/div[2]/div/div/div[3]/a/img",
+      "Value": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${!statusOK} == true",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=/html/body/div[5]/div[2]/div/div/div/button/span",
+      "Value": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "waitForElementVisible",
+      "Target": "xpath=//*[@id=\"scrollToTransactions\"]/div/div/div[3]/div/div/div[2]/div/div/div/div[2]/div[3]/div[2]/input",
+      "Value": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "new_payment_dpi_96.png",
+      "Value": ""
+    },
+    {
+      "Command": "waitForElementVisible",
+      "Target": "xpath=//*[@id=\"scrollToTransactions\"]/div/div/div[3]/div/div/div[2]/div/div/div/div[2]/div[3]/div[2]/div/ul",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "${user_account_type}",
+      "Value": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${user_account_type} == \"234\" || ${user_account_type} == \"890\"",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"scrollToTransactions\"]/div/div/div[3]/div/div/div[2]/div/div/div/div[2]/div[3]/div[2]/input",
+      "Value": "Telekom Malaysia "
+    },
+    {
+      "Command": "waitForPageToLoad",
+      "Target": "3000",
+      "Value": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "telekom_malaysia_dpi_96.png",
+      "Value": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${user_account_type} == \"012\"",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"scrollToTransactions\"]/div/div/div[3]/div/div/div[2]/div/div/div/div[2]/div[3]/div[2]/input",
+      "Value": "Maxis"
+    },
+    {
+      "Command": "waitForPageToLoad",
+      "Target": "3000",
+      "Value": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "maxis_dpi_96.png",
+      "Value": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "if_v2",
+      "Target": "${user_account_type} == \"016\"",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"scrollToTransactions\"]/div/div/div[3]/div/div/div[2]/div/div/div/div[2]/div[3]/div[2]/input",
+      "Value": "DIGI"
+    },
+    {
+      "Command": "waitForPageToLoad",
+      "Target": "3000",
+      "Value": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "digi_dpi_96.png",
+      "Value": ""
+    },
+    {
+      "Command": "end",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[@id=\"scrollToTransactions\"]/div[4]/div[2]/div/div/div/h6",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"scrollToTransactions\"]/div[4]/div[2]/div/div/div[2]/div/div/div/div/div[2]/input",
+      "Value": "${account_number}"
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"scrollToTransactions\"]/div[4]/div[2]/div/div/div[2]/div/div[2]/div[2]/button",
+      "Value": ""
+    },
+    {
+      "Command": "verifyElementPresent",
+      "Target": "xpath=//*[@id=\"scrollToTransactions\"]/div/div/div/div/div/div[2]/div",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "xpath=//*[@id=\"scrollToTransactions\"]/div/div/div/div/div/div[2]/div/div/div[3]/div/div[2]/input",
+      "Value": "${pay_amount}"
+    }
+  ]
+}
